@@ -1,23 +1,78 @@
 aid: ash-wellness
+
 name: Ash Wellness
-description: 'Ash Wellness is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/679ae4c97905c168c32b0d7d/67c231073af05b85b53a6f79_Ash_og_image.avif
+
+description: 'Ash Wellness provides at‑home health testing solutions for organizations, enabling health plans and public health entities to close care gaps with convenient, accurate diagnostics. Their platform offers a range of testing kits for infectious disease, cancer screening, chronic conditions, hormonal health, and environmental health, supported by a digital health integration and robust data reporting.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ash-wellness/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- HealthTech
+- Diagnostics
+- At-Home Testing
+- Healthcare
+- B2B
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ash-wellness-hosts.yml
+- type: Vendors
+  url: vendors/ash-wellness-vendors.yml
+- type: TrustCenter
+  url: https://trust.poweredbyash.com/
+- type: Newsroom
+  url: https://www.poweredbyash.com/press
+- type: DeveloperPortal
+  url: https://docs.ashwellness.io/password
+- type: DomainSecurity
+  url: security/ash-wellness-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.poweredbyash.com/
+- type: Documentation
+  url: https://www.poweredbyash.com/about-us
+- type: Blog
+  url: https://www.poweredbyash.com/blog
+- type: TermsOfService
+  url: https://www.poweredbyash.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.poweredbyash.com/privacy-policy
+- type: Support
+  url: https://support.poweredbyash.com/hc/en-us/requests/new?ticket_form_id=53262861689876
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript and provide no machine‑readable spec.
+  evidence:
+    - url: https://www.poweredbyash.com/about-us
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

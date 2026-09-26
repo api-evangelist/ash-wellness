@@ -1,0 +1,101 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - other
+  - portal
+  - support
+  - website
+hosts:
+- host: api.poweredbyash.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: poweredbyash.com
+  role: api
+  relation: own
+- host: docs.ashwellness.io
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: ashwellness.io
+  role: portal
+  relation: other-domain
+- host: docs.poweredbyash.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: Ash
+  status: 200
+  registrable_domain: poweredbyash.com
+  role: docs
+  relation: own
+- host: support.poweredbyash.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  serves:
+  - support
+  vendor: zendesk
+  registrable_domain: poweredbyash.com
+  role: support
+  relation: own
+- host: trust.poweredbyash.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TrustCenter
+  serves: []
+  registrable_domain: poweredbyash.com
+  role: other
+  relation: own
+- host: www.poweredbyash.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Documentation
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: poweredbyash.com
+  role: website
+  relation: own
