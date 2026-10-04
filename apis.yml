@@ -21,7 +21,16 @@ created: '2026-09-26'
 
 modified: '2026-09-26'
 
+x-docs-platform: readme
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-10-03
 tags:
+- Health Tech
+- Diagnostics
+- At-Home Testing
+- Healthcare
+- B2B
+tags_raw:
 - HealthTech
 - Diagnostics
 - At-Home Testing
